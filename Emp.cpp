@@ -8,6 +8,7 @@
  */
 
 #include <iostream>
+#include <string.h>
 #include "Emp.h"
 
 using namespace std;
@@ -25,7 +26,21 @@ const char* Emp::getName() const{
 }
 
 void Emp::setName(char* name){
-	this->name = name;
+
+	int count = sizeof(name) / sizeof(char);
+	this->name = new char[count + 1];
+	strncpy(this->name, name, count);
+
+	/*
+	for ( int i = 0; i < count; i++ ){
+
+		this->name[i] = name[i];
+		if ( ( i + 1 ) == count ){
+			name[i + 1] = '\0';
+		}
+	}
+	*/
+
 }
 
 const int Emp::getGrade(){

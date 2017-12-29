@@ -1,9 +1,9 @@
 /*
  * Company.h
  *
- * ì‘ì„±ì: Jungdy
- * ì‘ì„±ì¼ì: 2017. 12. 28
- * ì£¼ì œëª…: ì§ì› ëª…ë¶€ í”„ë¡œê·¸ë¨
+ * ÀÛ¼ºÀÚ: Jungdy
+ * ÀÛ¼ºÀÏÀÚ: 2017. 12. 28
+ * ÁÖÁ¦¸í: Á÷¿ø ¸íºÎ ÇÁ·Î±×·¥
  *
  */
 
@@ -42,14 +42,14 @@ void Company<T>::insert(LinkedList<T>& linkedlist){
 	int grade;
 	int pay;
 
-	cout << "ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”" << endl;
+	cout << "ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä" << endl;
 	cin.clear();
     cin.ignore();
     cin.getline(name, sizeof(name));
 
-	cout << "ì§ê¸‰ì„ ì…ë ¥í•˜ì„¸ìš”(ìˆ«ìë§Œ)" << endl;
+	cout << "Á÷±ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä(¼ıÀÚ¸¸)" << endl;
 	cin >> grade;
-	cout << "ê¸‰ì—¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”(ìˆ«ìë§Œ)" << endl;
+	cout << "±Ş¿©¸¦ ÀÔ·ÂÇÏ¼¼¿ä(¼ıÀÚ¸¸)" << endl;
 	cin >> pay;
 
 	emp.setId(id);
@@ -81,16 +81,16 @@ void Company<T>::remove(LinkedList<T>& linkedlist){
 		emp = linkedlist.pop();
 
 		cout << "---------------------------" << endl;
-		cout << "| ì‚­ì œ                              |" << endl;
+		cout << "| »èÁ¦                              |" << endl;
 		cout << "---------------------------" << endl;
-		cout << "ì§ì›ID:" << emp.getId() << endl;
-		cout << "ì§ì›ëª…:" << emp.getName() << endl;
-		cout << "ì§ê¸‰:" << emp.getGrade() << endl;
-		cout << "ê¸‰ì—¬:" << emp.getPay() << endl;
+		cout << "Á÷¿øID:" << emp.getId() << endl;
+		cout << "Á÷¿ø¸í:" << emp.getName() << endl;
+		cout << "Á÷±Ş:" << emp.getGrade() << endl;
+		cout << "±Ş¿©:" << emp.getPay() << endl;
 	}
 	else
 	{
-		cout << "ìë£Œê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤." << endl;
+		cout << "ÀÚ·á°¡ ºñ¾îÀÖ½À´Ï´Ù." << endl;
 	}
 
 }
@@ -103,7 +103,7 @@ void Company<T>::view(LinkedList<T>& linkedlist){
 	if ( !linkedlist.isEmpty() ){
 
 		cout << "---------------------------" << endl;
-		cout << "| ì¡°íšŒ                              |" << endl;
+		cout << "| Á¶È¸                              |" << endl;
 		cout << "---------------------------" << endl;
 
 		Node<Emp>* pNode = NULL;
@@ -113,10 +113,10 @@ void Company<T>::view(LinkedList<T>& linkedlist){
 
 			emp = pNode->getData();
 
-			cout << "ì§ì›ID:" << emp.getId() << endl;
-			cout << "ì§ì›ëª…:" << emp.getName() << endl;
-			cout << "ì§ê¸‰:" << emp.getGrade() << endl;
-			cout << "ê¸‰ì—¬:" << emp.getPay() << endl;
+			cout << "Á÷¿øID:" << emp.getId() << endl;
+			cout << "Á÷¿ø¸í:" << emp.getName() << endl;
+			cout << "Á÷±Ş:" << emp.getGrade() << endl;
+			cout << "±Ş¿©:" << emp.getPay() << endl;
 
 			pNode = pNode->getNext();
 
@@ -126,7 +126,7 @@ void Company<T>::view(LinkedList<T>& linkedlist){
 	}
 	else
 	{
-		cout << "ìë£Œê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤." << endl;
+		cout << "ÀÚ·á°¡ ºñ¾îÀÖ½À´Ï´Ù." << endl;
 	}
 }
 
@@ -141,24 +141,24 @@ void Company<T>::run(){
 	while ( choose ){
 
 		cout << "------------------------------" << endl;
-		cout << "| Rabbit-white = ì§ì› ëª…ë¶€ ê´€ë¦¬   |" << endl;
+		cout << "| Rabbit-white = Á÷¿ø ¸íºÎ °ü¸®   |" << endl;
 		cout << "------------------------------" << endl;
 
-		cout << "1. ì¶”ê°€" << endl;
-		cout << "2. ì‚­ì œ" << endl;
-		cout << "3. ì¡°íšŒ" << endl;
-		cout << "0. ì¢…ë£Œ" << endl;
+		cout << "1. Ãß°¡" << endl;
+		cout << "2. »èÁ¦" << endl;
+		cout << "3. Á¶È¸" << endl;
+		cout << "0. Á¾·á" << endl;
 
 		cin >> choose;
 
 		switch ( choose ){
 
-			// ì¶”ê°€
+			// Ãß°¡
 			case INSERT:
 				insert(linkedlist);
 				break;
 
-			// ì‚­ì œ
+			// »èÁ¦
 			case REMOVE:
 				remove(linkedlist);
 				break;
@@ -169,7 +169,7 @@ void Company<T>::run(){
 
 		} // end of switch
 
-		// ì¡°ê±´:íƒˆì¶œ
+		// Á¶°Ç:Å»Ãâ
 		if ( choose == EXIT )
 			break;
 
