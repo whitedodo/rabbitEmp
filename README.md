@@ -6,6 +6,7 @@
 > ##### 3. Description: 
 > ###### 3-1. Linked List (Data Structure) was used.
 > ###### 3-2. UML blueprint was created.
+> ###### 3-3. Data structures implemented a header template, the template class.
 > ##### 4. License: GNU General Public License, version 3
 
 #### 빌드(Build)
